@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baja California Norte</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f8fb;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+header h1{
+font-size:70px;
+animation:aparecer 2s ease;
+}
+
+header p{
+font-size:24px;
+max-width:900px;
+margin-top:20px;
+animation:aparecer 3s ease;
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.boton{
+margin-top:20px;
+padding:15px 30px;
+background:#ffb703;
+border:none;
+border-radius:40px;
+color:black;
+font-size:18px;
+cursor:pointer;
+transition:0.4s;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+}
+
+.boton:hover{
+transform:scale(1.1);
+background:#ffd166;
+}
+
+/* NAV */
+
+nav{
+background:#023047;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+}
+
+nav ul li{
+margin:15px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ffb703;
+}
+
+/* SECCIONES */
+
+section{
+padding:80px 10%;
+}
+
+.titulo{
+text-align:center;
+font-size:45px;
+color:#023047;
+margin-bottom:40px;
+}
+
+.contenedor{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+color:#023047;
+margin-bottom:15px;
+}
+
+.card-content p,
+.card-content li{
+margin-bottom:10px;
+}
+
+/* VIDEOS */
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.video-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.4s;
+}
+
+.video-card:hover{
+transform:scale(1.03);
+}
+
+.video-card iframe{
+width:100%;
+height:250px;
+border:none;
+}
+
+.video-card h3{
+padding:20px;
+text-align:center;
+color:#023047;
+}
+
+.video{
+margin-top:50px;
+text-align:center;
+}
+
+video{
+width:100%;
+max-width:900px;
+height:500px;
+border-radius:20px;
+}
+
+/* BOTÓN SUBIR */
+
+#topBtn{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#ffb703;
+color:black;
+border:none;
+padding:15px 20px;
+border-radius:50%;
+font-size:20px;
+cursor:pointer;
+display:none;
+z-index:999;
+}
+
+/* FOOTER */
+
+footer{
+background:#023047;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+footer i{
+margin:10px;
+font-size:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header h1{
+font-size:45px;
+}
+
+header p{
+font-size:18px;
+}
+
+.titulo{
+font-size:35px;
+}
+
+video{
+height:300px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<h1>Baja California Norte</h1>
+
+<p>
+Conoce las tradiciones, cultura, gastronomía y lugares turísticos
+más impresionantes del norte de México.
+</p>
+
+<a href="#presentacion" class="boton">
+<i class="fa-solid fa-earth-americas"></i>
+Explorar Página
+</a>
+
+<a href="#spot" class="boton">
+<i class="fa-solid fa-play"></i>
+Ver Spot Turístico
+</a>
+
+</header>
+
+<!-- MENÚ -->
+
+<nav>
+
+<ul>
+
+<li><a href="#presentacion">Presentación</a></li>
+<li><a href="#ubicacion">Ubicación</a></li>
+<li><a href="#costumbres">Tradiciones</a></li>
+<li><a href="#gastronomia">Gastronomía</a></li>
+<li><a href="#musica">Música</a></li>
+<li><a href="#lugares">Lugares</a></li>
+<li><a href="#destinos">Destinos</a></li>
+<li><a href="#xolos">Estadio Xolos</a></li>
+<li><a href="#spot">Spot</a></li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#hospedaje">Hospedaje</a></li>
+<li><a href="#bio">Biografía</a></li>
+
+</ul>
+
+</nav>
+
+<!-- PRESENTACIÓN -->
+
+<section id="presentacion">
+
+<h2 class="titulo">Presentación</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<div class="card-content">
+
+<p>
+Baja California Norte es un estado ubicado en el noroeste de México,
+reconocido por su gran diversidad natural, cultural y turística.
+Se caracteriza por sus playas, desiertos, montañas y valles,
+además de su cercanía con Estados Unidos, lo que impulsa
+el comercio y el turismo.
+</p>
+
+<p>
+Su gastronomía destacada por los mariscos,
+la ensalada César y los vinos del Valle de Guadalupe.
+Entre sus principales lugares turísticos se encuentran Tijuana, Ensenada, Rosarito,Mexicali y San Felipe.Baja California Norte combina modernidad,naturaleza y tradicion,siendo un destino muy importante de México.
+</p>
+<p>
+Esta página está dirigida a turistas y personas interesadas
+en conocer más sobre Baja California Norte,
+ya que proporciona información sobre sus características,
+cultura, tradiciones y atractivos turísticos.
+</p>
+<p>
+
+El objetivo de esta página es promover el turismo,
+difundir la riqueza cultural, natural y gastronómica
+de Baja california Norte,además de informar sobre sus destinos principales para atraer visitantes y fortalecer el desarrolo economico de la region
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- UBICACIÓN -->
+
+<section id="ubicacion">
+
+<h2 class="titulo">Ubicación Geográfica</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="ubicacion.jpg">
+
+<div class="card-content">
+
+<h3>Mapa del Estado</h3>
+
+<p>
+Baja California Norte se encuentra
+al noroeste de México.
+</p>
+
+<a href="https://www.google.com/maps/place/Baja+California/"
+target="_blank"
+class="boton">
+
+Ver Ubicación
+
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- TRADICIONES -->
+
+<section id="costumbres">
+
+<h2 class="titulo">Tradiciones</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>Fiestas Regionales</h3>
+
+<ul>
+<li>Fiestas de la Vendimia</li>
+<li>Carnaval de Ensenada</li>
+<li>Ferias Regionales</li>
+<li>Semana Santa</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- GASTRONOMÍA -->
+
+<section id="gastronomia">
+
+<h2 class="titulo">Gastronomía</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Comida Típica</h3>
+
+<ul>
+<li>Tacos de carne asada</li>
+<li>Mariscos frescos</li>
+<li>Langosta estilo Puerto Nuevo</li>
+<li>Vinos del Valle de Guadalupe</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- MÚSICA -->
+
+<section id="musica">
+
+<h2 class="titulo">Música</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>Música Norteña</h3>
+
+<p>
+La música norteña y banda son muy populares
+en Baja California Norte.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- LUGARES -->
+
+<section id="lugares">
+
+<h2 class="titulo">Lugares Turísticos</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>Valle de Guadalupe</h3>
+
+<p>
+Famoso por sus viñedos, vinos
+y paisajes naturales.
+</p>
+
+<a href="https://www.mexicodesconocido.com.mx/valle-de-guadalupe-baja-california.html"
+target="_blank"
+class="boton">
+
+Más Información
+
+</a>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>Tijuana</h3>
+
+<p>
+Ciudad moderna famosa por su cultura,
+gastronomía y turismo deportivo.
+</p>
+
+<a href="https://www.tijuana.gob.mx/"
+target="_blank"
+class="boton">
+
+Conocer Tijuana
+
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- DESTINOS -->
+
+<section id="destinos">
+
+<h2 class="titulo">Destinos Destacados</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>Ensenada</h3>
+
+<p>
+Destino turístico reconocido
+por La Bufadora y sus playas.
+</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>Rosarito</h3>
+
+<p>
+Rosarito destaca por sus playas
+y vida nocturna.
+</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>Mexicali</h3>
+
+<p>
+Capital de Baja California Norte,
+famosa por su cultura y gastronomía.
+</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>San Felipe</h3>
+
+<p>
+Conocido por sus playas
+y actividades acuáticas.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- XOLOS -->
+
+<section id="xolos">
+
+<h2 class="titulo">Estadio Caliente - Xolos</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="xolos.jpg">
+
+<div class="card-content">
+
+<h3>Turismo Deportivo</h3>
+
+<p>
+El Estadio Caliente es uno de los lugares turísticos
+más visitados de Tijuana.
+</p>
+
+<ul>
+<li>Casa de los Xolos</li>
+<li>Eventos deportivos</li>
+<li>Ambiente familiar</li>
+<li>Turismo deportivo</li>
+</ul>
+
+<a href="https://xolos.com.mx/"
+target="_blank"
+class="boton">
+
+Página Oficial
+
+</a>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="aficion.jpg">
+
+<div class="card-content">
+
+<h3>Afición Xolos</h3>
+
+<p>
+La afición de Xolos crea
+uno de los mejores ambientes
+del fútbol mexicano.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SPOT -->
+
+<section id="spot">
+
+<h2 class="titulo">Spot Turístico</h2>
+
+<div class="video">
+
+<video controls poster="https://upload.wikimedia.org/wikipedia/commons/2/28/Estadio_Caliente.jpg">
+
+<source src="bajacalifornianorte.mp4" type="video/mp4">
+
+Tu navegador no soporta videos.
+
+</video>
+
+</div>
+
+</section>
+
+<!-- VIDEOS -->
+
+<section id="videos">
+
+<h2 class="titulo">Videos Turísticos</h2>
+
+<div class="video-grid">
+
+<div class="video-card">
+
+<h3>Ensenada</h3>
+
+<iframe
+src="https://www.youtube.com/embed/6W5lq24sA8A"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="video-card">
+
+<h3>Rosarito</h3>
+
+<iframe
+src="https://www.youtube.com/embed/8M7fY6M7K8A"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="video-card">
+
+<h3>Mexicali</h3>
+
+<iframe
+src="https://www.youtube.com/embed/m9v2d8n4L4A"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="video-card">
+
+<h3>San Felipe</h3>
+
+<iframe
+src="https://www.youtube.com/embed/B5R7dVn6x0k"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="video-card">
+
+<h3>Valle de Guadalupe</h3>
+
+<iframe
+src="https://www.youtube.com/embed/Jx2T2G6kK9A"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="video-card">
+
+<h3>Estadio Xolos</h3>
+
+<iframe
+src="https://www.youtube.com/embed/Q8N4s7J0m2I"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HOSPEDAJE -->
+
+<section id="hospedaje">
+
+<h2 class="titulo">Hospedaje</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80">
+
+<div class="card-content">
+
+<h3>Opciones de Hospedaje</h3>
+
+<ul>
+<li>Hoteles</li>
+<li>Resorts</li>
+<li>Cabañas</li>
+<li>Camping</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- BIO -->
+
+<section id="bio">
+
+<h2 class="titulo">Biografía del Creador</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<div class="card-content">
+
+<h3>Martín Daniel Mondragón Bartolo</h3>
+
+<p>
+Alumno del Colegio de Bachilleres Plantel 5 Satélite,
+de 17 años apasionado de conocer lugares nuevos de México ver las diferencias entre un estado y otro.
+Al que el alumno estudio programacion en su trayecto de preparatoria diseño esta pagina de un estado que es se encuentra el noroeste de México que busca transmitir lo bonito que es el estado de que hay lugares muy buenos que visitar.
+</p>
+
+<p>
+Este proyecto busca promover
+los lugares turísticos
+de Baja California Norte.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>Baja California Norte</h2>
+
+<p>
+Página interactiva turística y educativa
+</p>
+
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+
+</footer>
+
+<!-- BOTÓN -->
+
+<button id="topBtn">↑</button>
+
+<script>
+
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+if(document.body.scrollTop > 300 ||
+document.documentElement.scrollTop > 300){
+
+topBtn.style.display = "block";
+
+}else{
+
+topBtn.style.display = "none";
+
+}
+
+};
+
+topBtn.onclick = function(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+};
+
+</script>
+
+</body>
+</html>
